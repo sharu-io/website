@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>sharu</title>
+  <base href="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
+  <link rel="stylesheet" href="./css/core/core.css">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: black;
+    }
+
+    #download {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .buzzwords {
+      height: 50px;
+    }
+
+    .text-block {
+      padding: 30px;
+      width: 500px;
+    }
+
+    .under-construction {
+      padding: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="logo-container"></div>
+  <!-- <a href="#" class="button glitch grey blue-candy-text flow-text">Download Now!</a> -->
+  <a id="download" href="#downloadSharu" class="throb small-btn alert border-dashed-thick lemon-border"> <strong>Download
+    Now!</strong></a>
+  <container>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="blue-candy-text heavy text-center">SHARU</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="buzzwords col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p class="blue-candy-text text-center baffle baffle-longer">fully decentralized, post-cloud, unstoppable,
+          censorfree, trustless, encrypted, anonymous filesharing</p>
+      </div>
+    </div>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        Share your files, trust no one. Sharu is filesharing for all hackers, dissidents, leakers, anarchists.
+        Filesharing for
+      </div>
+    </div>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h4 class="text-block platinum-text center heavy">
+        YOU!
+      </h4>
+    </div>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        Sharu is build upon <a href="https://ipfs.io" target="_blank">IPFS</a>, <a href="https://ethereum.org" target="_blank">Ethereum</a>,
+        RSA, AES and ECC
+        crypto. Sharu runs locally as an electron app. There is no backend server.
+      </div>
+    </div>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        As your files are distributed via IPFS your machine has to be online to allow others to download your shared
+        files.
+        To allow sharing with your machine offline, you can setup a pinning server to distribute your files.
+      </div>
+    </div>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        Every Sharu folder is AES-GCM 256 encrypted with secure random Keys. These keys are RSA-OAEP 2048 encrypted.
+        Your RSA key is encrypted with the key of an Ethereum Wallet. This key is stored encrypted inside the app, with
+        a password you choose.
+        The encrypted AES and RSA keys are stored in IPFS, you can export your Ethereum Wallet key anytime as a
+        mnemonic. So you can easily log in on different machines.
+        Currently we use a <a href="https://kaleido.io/" target="_blank">Kaleido</a> permissioned blockchain, to store
+        what is shared
+        with who. Transactions are free.
+      </div>
+    </div>
+
+    <h4 class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12 platinum-text justify">
+      TRY IT!
+    </h4>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        Right now, Sharu is not more than a technical proof of concept, but even now some things already work so you
+        might get the
+        idea why we think we should work on this thing to make it a fully usable product. <br /><br />
+        Feel free to try it out - currently
+        <span id="usercount"></span>
+        people have used sharu so far,
+        <span id="sharecount"></span> shares have been produced.
+      </div>
+    </div>
+
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <!-- <div class="text-block platinum-text justify"> -->
+      <a name="downloadSharu" href="https://gateway.ipfs.io/ipfs/QmeYoAQ4GwRS22uvojcWQoKZm3iqMoBR1AFH7kJSXpvVmt/sharu-poc.AppImage" class="throb justify small-btn alert border-dashed-thick lemon-border"
+        target="_blank">
+        <strong>Download Now!</strong> <br />
+        Linux build</a>
+      <!-- </div> -->
+      <a href="https://gateway.ipfs.io/ipfs/QmeYoAQ4GwRS22uvojcWQoKZm3iqMoBR1AFH7kJSXpvVmt/sharu-poc.exe" class="throb small-btn alert border-dashed-thick lemon-border"
+        target="_blank">
+        <strong>Download Now!</strong> <br />
+        Windows build</a>
+      <a href="https://gateway.ipfs.io/ipfs/QmeYoAQ4GwRS22uvojcWQoKZm3iqMoBR1AFH7kJSXpvVmt/sharu-poc.dmg" class="throb small-btn alert border-dashed-thick lemon-border target="
+        _blank">
+        <strong>Download Now!</strong><br />
+        OS X build</a>
+    </div>
+
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        We are happy if you share
+        your feedback/bugs as an <a href="mailto:masters@sharu.io">email</a> or open an issue at <a href="https://github.com/sharu-io/desktop/issues"
+          target="_blank">github</a>
+      </div>
+    </div>
+
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <!-- <div class="text-block platinum-text justify"> -->
+      <div class="justify under-construction">
+        <img src="images/undercon.gif">
+      </div>
+      <!-- </div> -->
+    </div>
+
+    <h4 class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12 platinum-text justify">
+      LIMITATIONS
+    </h4>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        It is probably easier to list what is already working ;-)
+        <br /><br />
+
+        <li>
+          Sharing of small files (some MB) is already working quite good.
+          Big files do work in LAN, but due to the absence of high bandwith of
+          upstream in standard environments it does not spark joy when you
+          try to share the last season of game of thrones with your friends.
+        </li>
+        <li>
+          Receivers of a share can only download files as long as the publisher
+          has her sharu-application running. We plan to release some basic
+          image/docker-container/whatever to proxy your content using a
+          raspberry pi or something else, but the current implementation is
+          even more prebeta than the sharu application itself is.
+        </li>
+        <li>
+          Each share does have exactly one owner, multiple contributors to a
+          share is not implemented yet. We already know how to add this feature,
+          but as long as we struggle with more fundamental issues we are not
+          adding any features.
+        </li>
+        <li>
+          You can export your account to different machines, nevertheless you
+          can only edit a share from the sharu-application the share was
+          initially created. This is also solveable, but the implementation
+          remains untouched as long we have fundamental issues to be solved
+        </li>
+        <li>
+          All files are encrypted and only decryptable by exactly the users you
+          want. The file- and foldernames are NOT. Again, solveable - but not at
+          the top of our Todo-List.
+        </li>
+      </div>
+    </div>
+
+    <h4 class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12 platinum-text justify">
+      FAQ
+    </h4>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        Q: Is it really decentralized, unstoppable, censorfree as long as you are using
+        a permissioned chain like Kaleido? <br />
+        A: That's right - it is not! But right now usability is more important - we don't want
+        our users to think about transaction-costs and FIAT-to-crypto-conversion.
+        Moving to the <i>main-net</i> or something similar is going to happen at some
+        point (probably in 2020 with PoS or with some kind of side-chain).
+        <br /><br />
+        Q: Why is looking up shares and downloading files so slow?<br />
+        A1: We are still in the process of crunching numbers and use
+        hyper-parameter-optimization to find the right setup of the ipfsd running
+        inside the application.<br />
+        A2: Although all running Sharu-applications try to relay the meta-data of
+        all existing shares, this is still pretty basic and some better concept like
+        sharding needs to be implemented.
+        <br /><br />
+        Q: If you want to attach "trustless" to this, why isn't this opensource?<br />
+        A: To be honest: we are full of shame about the
+        quality of the code. 2 of the 3 developers of Sharu left the path of
+        <i>professional</i> software development several years ago and got in touch
+        with typescript and solidity for the first time with this project. <strike>Nevertheless,
+        this will be opensource at some point and we would be happy if it is not only the
+        three of us spending our free nights working on this thing.</strike> <br/>
+        UPDATE: As everybody knows 2/3 of us are very good in doing <i>bad code</i>, we felt 
+        there is no real problem. Voila: here is the <a href="https://github.com/sharu-io/desktop" target="_blank">desktop-application</a>
+        <br /><br />
+        Q: Why don't you use metamask as the integration with the ethereum stack?<br />
+        A: At first we did, but we think people don't want to add plugins, create
+        wallets and do all the other things cryptonerds like to to. ethers.js works fine right
+        now.
+
+      </div>
+    </div>
+
+    <h4 class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12 platinum-text justify">
+      WHAT'S NEXT?
+    </h4>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        There is TONS of stuff to do, this is a non-exclusive list of things we want to achieve in the future
+        <br /><br />
+        <li>
+          This needs to be opensource. Not only because we believe people do not trust compiled code, but also
+          because we cannot bring this thing to its final state with our own free time.
+        </li>
+        <li>
+          Stability: it is far from being stable. We spent days of trying to use ipfs right (and played both
+          with go-ipfs and js-ipfs) and are totally not happy with the current state
+        </li>
+        <li>
+          Relaying: Of course it is not acceptable that a Sharu-instance needs to run for accessing files - we
+          already started working on off-the-shelf pinning services you can add to a local machine
+          (running in your basement on a raspberry pi or a NAS) or at a VM/HW at your favourite provider.
+        </li>
+        <li>
+          Collaboration: shares should be writeable by multiple partys.
+        </li>
+        <li>
+          Multi-instance: use your Sharu-account on different machines.
+        </li>
+        <li>
+          Mobile: at least a read-only-version of the shares you can access should be there for your cellphone.
+        </li>
+        <li>
+          Webonly: we started Sharu as a web-only-application but needed to switch to electron as we could not
+          find a userfriendly way to integrate with a locally running IPFS-node. Removing the need to install an
+          application is still a nice thing we would like to have
+        </li>
+        <li>
+          OS-Integration: mount shares into your OS the same way as you mount NFS or SMB.
+        </li>
+        <li>
+          Permissioned/Non-permissioned blockchain: using Kaleido gave us a lot of benefits, but this cannot be
+          the final state.
+        </li>
+        <li>
+          Encryption: there is still some stuff not encrypted: filenames, foldernames, the wallets of the people
+          allowed to access a share.
+        </li>
+        <li>
+          Migrateability: Moving away from Kaleido currently means that we create a split-brain and all already
+          created content is lost.
+        </li>
+        <li>
+          Transactions: right now the application fires transactions into the blockchain with every single change.
+          This is fine with a PoA-chain, but most probably not for something else
+        </li>
+        <li>
+          Maintaining the state: we aren't even sure if using a blockchain to decentralized maintain the state (e.g.:
+          mapping shares
+          to ipfs) is the right way. Maybe we find something better. ;)
+        </li>
+      </div>
+    </div>
+
+    <h4 class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12 platinum-text justify">
+      JOIN TEH PARTY!
+    </h4>
+    <div class="flex-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-block platinum-text justify">
+        Don't hesitate to share your thoughts at <a href="https://github.com/sharu-io/sharu/" target="_blank">github</a>
+      </div>
+    </div>
+
+
+
+  </container>
+
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/brutalist.js"></script>
+  <script src="./js/start.brutalizing.js"></script>
+  <script src="./js/logo.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: "https://sharu.moep.net:8082/userCount"
+      }).then(function (data) {
+        $('#usercount').append(data);
+      });
+
+      $.ajax({
+        url: "https://sharu.moep.net:8082/shareCount"
+      }).then(function (data) {
+        $('#sharecount').append(data);
+      });
+
+    });
+
+
+  </script>
+</body>
+
+</html>
